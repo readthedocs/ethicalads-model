@@ -3,13 +3,13 @@ description: "This project uses [spaCy](https://spacy.io) with annotated data fr
 # Variables can be referenced across the project.yml using ${vars.var_name}
 vars:
   # NOTE: set to one of the GPU configurations for the GPU
-  config: "config.cfg"
+  config: "gpu-accuracy.cfg"
   name: "ethicalads_topics"
   version: "0.0.0"
   train: "combined-set1"
   dev: "combined-set2"
   # Set to 0 to use the GPU
-  gpu_id: -1
+  gpu_id: 0
 spacy_version: ">=3.0.6,<4.0.0"
 
 # These are the directories that the project needs. The project CLI will make

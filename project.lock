@@ -52,7 +52,7 @@ evaluate:
 package:
   cmd: python -m spacy run package
   script:
-    - python -m spacy package --name ethicalads_topics --version 20221213_08_44_01
+    - python -m spacy package --name ethicalads_topics --version 20221213_16_03_36
       training/model-best packages
   deps:
     - path: corpus/test.spacy
