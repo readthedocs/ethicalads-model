@@ -130,8 +130,6 @@ def run_ssh_command(ssh_identity_file, instance_ip, command):
 def train_model(ssh_identity_file, instance_ip):
     commands = [
         "mkdir -p ~/checkouts && git clone https://github.com/readthedocs/ethicalads-model.git ~/checkouts/ethicalads-model",
-        # TODO: remove
-        "cd ~/checkouts/ethicalads-model && git checkout davidfischer/building-in-the-cloud",
         "cd ~/checkouts/ethicalads-model && pip install -r requirements.txt",
         # Debugging commands that deal with GPUs
         # and whether the CUDA and GPU libs are setup correctly
