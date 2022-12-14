@@ -128,56 +128,29 @@ def run_ssh_command(ssh_identity_file, instance_ip, command):
 
 
 def train_model(ssh_identity_file, instance_ip):
-    run_ssh_command(
-        ssh_identity_file,
-        instance_ip,
+    commands = [
         "mkdir -p ~/checkouts && git clone https://github.com/readthedocs/ethicalads-model.git ~/checkouts/ethicalads-model",
-    )
-    # TODO: REMOVE THIS ONE
-    run_ssh_command(
-        ssh_identity_file,
-        instance_ip,
+        # TODO: remove
         "cd ~/checkouts/ethicalads-model && git checkout davidfischer/building-in-the-cloud",
-    )
-    run_ssh_command(
-        ssh_identity_file,
-        instance_ip,
         "cd ~/checkouts/ethicalads-model && pip install -r requirements.txt",
-    )
-
-    # Just shows information about Nvidia GPUs to the command line for debugging
-    run_ssh_command(
-        ssh_identity_file,
-        instance_ip,
+        # Debugging commands that deal with GPUs
+        # and whether the CUDA and GPU libs are setup correctly
         "nvidia-smi",
-    )
-    run_ssh_command(
-        ssh_identity_file,
-        instance_ip,
         "python -c 'import torch; print(torch.cuda.is_available())'",
-    )
-    run_ssh_command(
-        ssh_identity_file,
-        instance_ip,
         "python -c 'import cupy; import cupyx; print(cupy.cuda.runtime.getDeviceCount())'",
-    )
-    run_ssh_command(
-        ssh_identity_file,
-        instance_ip,
         "python -c 'import spacy; print(spacy.require_gpu())'",
-    )
-
-    # Actually train the model
-    run_ssh_command(
-        ssh_identity_file,
-        instance_ip,
+        # End debugging commands
+        # Actually train the model
         "cd ~/checkouts/ethicalads-model && python scripts/generate-training-test-sets.py -o assets/train.json -f assets/test.json assets/categorized-data.yml",
-    )
-    run_ssh_command(
-        ssh_identity_file,
-        instance_ip,
         "cd ~/checkouts/ethicalads-model && python -m spacy project run all . --vars.train=train --vars.dev=test --vars.name=ethicalads_topics --vars.version=`date '+%Y%m%d_%H_%M_%S'`",
-    )
+    ]
+
+    for command in commands:
+        run_ssh_command(
+            ssh_identity_file,
+            instance_ip,
+            command,
+        )
 
 
 def copy_trained_model(ssh_identity_file, instance_ip):
