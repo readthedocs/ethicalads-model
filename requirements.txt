@@ -13,4 +13,4 @@ PyYAML==6.0
 # There are different packages for different versions of Cuda
 # Lambda seems to have recent versions (11.x where x>2)
 # (nvidia-smi shows what version is used)
-pip install cupy-cuda11x
+cupy-cuda11x
