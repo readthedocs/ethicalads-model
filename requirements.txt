@@ -8,3 +8,9 @@ langdetect==1.0.9
 requests==2.28.1
 requests-cache==0.9.5
 PyYAML==6.0
+
+# Install Python Cuda library (Python API for Nvidia GPUs)
+# There are different packages for different versions of Cuda
+# Lambda seems to have recent versions (11.x where x>2)
+# (nvidia-smi shows what version is used)
+cupy-cuda11x

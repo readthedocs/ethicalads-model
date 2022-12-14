@@ -8,19 +8,23 @@ This project uses [spaCy](https://spacy.io) to do text classification around tex
 
 ## Quickstart
 
-This will generate our training data and then build and train the model.
+This will generate our training data and then build and train the model locally.
 
-	# Generate training and test set from the categorized data (Yaml file)
-	python scripts/generate-training-test-sets.py -o assets/train.json -f assets/test.json assets/categorized-data.yml
-	python -m spacy project run all . --vars.train=train --vars.dev=test --vars.name=ethicalads_topics --vars.version=`date "+%Y%m%d_%H_%M_%S"`
+    # Generate training and test set from the categorized data (Yaml file)
+    python scripts/generate-training-test-sets.py -o assets/train.json -f assets/test.json assets/categorized-data.yml
+    python -m spacy project run all . --vars.train=train --vars.dev=test --vars.name=ethicalads_topics --vars.version=`date "+%Y%m%d_%H_%M_%S"`
 
-### Running the analyzer
 
-After installing the analyzer (it's installed in staging already),
-you can run it against an arbitrary URL to see how that page was classified.
-Note: this command is run inside the main project [ethical-ad-server](https://github.com/readthedocs/ethical-ad-server).
+## ☁️ Training in the Cloud
 
-    ADSERVER_ANALYZER_BACKEND=adserver.analyzer.backends.EthicalAdsTopicsBackend ./manage.py runmodel https://example.com
+Training is done best with a GPU.
+Currently, we're training our model on [LamdbaLabs Cloud GPU instances](https://lambdalabs.com/).
+
+    export LAMBDALABS_KEY=xxxxxxxxxxx
+    python scripts/cloudtrain.py
+
+This script will spin up a cloud GPU instance, train the model, and teardown the instance.
+The resulting model will be copied to the local `packages/` directory.
 
 
 ## 📋 project.yml
