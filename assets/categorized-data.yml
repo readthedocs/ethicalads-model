@@ -235,6 +235,62 @@
   topics: ["datascience"]
 - url: "https://shap-lrjball.readthedocs.io/en/latest/index.html"
   topics: ["datascience"]
+- url: "https://streamlit-book.readthedocs.io/en/latest/intro.html"
+  topics: ["datascience"]
+- url: "https://ckip-transformers.readthedocs.io/en/stable/main/readme.html"
+  topics: ["datascience"]
+- url: "https://cnvkit.readthedocs.io/en/stable/heterogeneity.html"
+  topics: ["datascience"]
+- url: "https://greenhouses-library.readthedocs.io/en/latest/"
+  topics: ["datascience"]
+- url: "https://floris.readthedocs.io/en/v2/index.html"
+  topics: ["datascience"]
+- url: "https://salib.readthedocs.io/en/latest/basics.html"
+  topics: ["datascience"]
+- url: "https://opendrop.readthedocs.io/en/latest/usage/index.html"
+  topics: ["datascience"]
+- url: "https://mercury-docs.readthedocs.io/en/latest/"
+  topics: ["datascience"]
+- url: "https://mpb.readthedocs.io/en/latest/"
+  topics: ["datascience"]
+- url: "https://mpb.readthedocs.io/en/latest/Python_User_Interface/"
+  topics: ["datascience"]
+- url: "https://matplotlib-curly-brace.readthedocs.io/en/latest/installation_and_setup.html"
+  topics: ["datascience"]
+- url: "https://matplotlib-curly-brace.readthedocs.io/en/latest/curlyBrace.html"
+  topics: ["datascience"]
+- url: "https://tsinfer.readthedocs.io/en/latest/introduction.html"
+  topics: ["datascience"]
+- url: "https://gglasso.readthedocs.io/en/latest/"
+  topics: ["datascience"]
+- url: "https://amgcl.readthedocs.io/en/latest/"
+  topics: ["datascience"]
+- url: "https://docs.deepmodeling.com/projects/deepmd/en/master/model/train-se-e2-a.html"
+  topics: ["datascience"]
+- url: "https://docs.deepmodeling.com/projects/deepmd/en/master/getting-started/training.html"
+  topics: ["datascience"]
+- url: "https://mmcv.readthedocs.io/en/latest/get_started/introduction.html"
+  topics: ["datascience"]
+- url: "https://mmcv.readthedocs.io/en/latest/get_started/previous_versions.html"
+  topics: ["datascience"]
+- url: "https://ckipnlp.readthedocs.io/en/latest/main/usage.html"
+  topics: ["datascience"]
+- url: "https://trankit.readthedocs.io/en/latest/news.html"
+  topics: ["datascience"]  # Python
+- url: "https://trankit.readthedocs.io/en/latest/posdep.html"
+  topics: ["datascience"]  # Python
+- url: "https://trankit.readthedocs.io/en/latest/performance.html"
+  topics: ["datascience"]  # Python
+- url: "https://premise.readthedocs.io/en/latest/"
+  topics: ["datascience"]  # Python
+- url: "https://premise.readthedocs.io/en/latest/introduction.html"
+  topics: ["datascience"]  # Python
+- url: "https://premise.readthedocs.io/en/latest/user_scenarios.html"
+  topics: ["datascience"]  # Python
+- url: "https://interpro-documentation.readthedocs.io/en/latest/interpro.html"
+  topics: ["datascience"]
+- url: "https://interpro-documentation.readthedocs.io/en/latest/download.html"
+  topics: ["datascience"]
 
 # Conda official docs
 - url: "https://docs.conda.io/en/latest/"
@@ -256,9 +312,9 @@
 - url: "https://bind9.readthedocs.io/en/latest/index.html"
   topics: ["security"]
 - url: "https://docs.readthedocs.io/en/stable/security.html"
-  topics: ["security", "frontend"]
+  topics: ["security"]
 - url: "https://flask.palletsprojects.com/en/2.1.x/security/"
-  topics: ["security", "frontend"]
+  topics: ["security", "backend"]
 - url: "https://btpssecpack.osbornepro.com/en/latest/"
   topics: ["security"]
 - url: "https://django-oauth-toolkit.readthedocs.io/en/latest/rest-framework/permissions.html"
@@ -334,6 +390,14 @@
   topics: ["security"]
 - url: "https://thumbor.readthedocs.io/en/latest/security.html"
   topics: ["security"]
+- url: "http://docs.w3af.org/en/latest/phases.html"
+  topics: ["security"]
+- url: "http://docs.w3af.org/en/latest/docker.html"
+  topics: ["security", "devops"]
+- url: "https://owasp-aasvs.readthedocs.io/en/latest/requirement-1.1.html"
+  topics: ["security"]
+- url: "https://owasp-aasvs.readthedocs.io/en/latest/requirement-2.1.html"
+  topics: ["security"]  # PHP
 
 
 ##############################################################################
@@ -415,6 +479,42 @@
   topics: ["frontend"]
 - url: "https://neutralino.js.org/docs/"
   topics: ["frontend"]
+- url: "http://react.jsbin.com/"
+  topics: ["frontend"]
+# Not really frontend but definitely JS/Node
+- url: "https://ibmi-oss-docs.readthedocs.io/en/latest/nodejs/README.html"
+  topics: ["frontend"]
+- url: "https://websockets.readthedocs.io/en/stable/intro/tutorial1.html"
+  topics: ["frontend", "backend"]
+- url: "https://kilianvalkhof.com/2021/web/detecting-media-query-support-in-css-and-javascript/"
+  topics: ["frontend"]
+- url: "http://docs.w3af.org/en/latest/advanced-use-cases.html"
+  topics: ["frontend", "security"]
+- url: "https://docs.nwjs.io/en/latest/For%20Users/Getting%20Started/"
+  topics: ["frontend"]
+- url: "https://docs.nwjs.io/en/latest/For%20Users/Advanced/Autoupdates/"
+  topics: ["frontend"]
+- url: "https://zope.readthedocs.io/en/latest/zopebook/DTML.html"
+  topics: ["frontend", "backend"]
+- url: "https://redux-form.com/8.1.0/docs/gettingstarted.md/"
+  topics: ["frontend"]
+- url: "https://redux-form.com/8.1.0/docs/api/field.md/"
+  topics: ["frontend"]
+# Content loaded via JS - we can't use this.
+#- url: "https://redux-form.com/8.1.0/examples/immutable/"
+#  topics: ["frontend"]
+- url: "https://markupsafe.palletsprojects.com/en/2.1.x/formatting/"
+  topics: ["frontend", "backend"]
+- url: "https://docs.mathquill.com/en/latest/Getting_Started/"
+  topics: ["frontend"]
+- url: "https://typegen.readthedocs.io/en/latest/overview.html"
+  topics: ["frontend", "backend"]  # .net, typescript
+- url: "https://typegen.readthedocs.io/en/latest/cli.html"
+  topics: ["frontend", "backend"]  # .net, typescript
+- url: "https://ngrx-forms.readthedocs.io/en/master/"
+  topics: ["frontend"]  # Angular, Redux
+- url: "https://ngrx-forms.readthedocs.io/en/master/user-guide/"
+  topics: ["frontend"]  # Angular, Redux
 
 
 ##############################################################################
@@ -473,6 +573,8 @@
   topics: ["backend", "frontend"]
 - url: "https://docs.celeryq.dev/en/master/userguide/canvas.html"
   topics: ["backend", "devops"]
+- url: "https://docs.celeryq.dev/projects/kombu/en/stable/introduction.html"
+  topics: ["backend", "devops"]
 # Looks like the Flask docs in Chinese...
 #- url: "https://dormousehole.readthedocs.io/en/latest/tutorial/layout.html"
 #  topics: ["backend"]
@@ -508,6 +610,48 @@
   topics: ["backend"]
 - url: "https://kotti.readthedocs.io/en/latest/index.html"
   topics: ["backend"]
+- url: "https://flask-jwt-extended.readthedocs.io/en/stable/blocklist_and_token_revoking/"
+  topics: ["backend", "security"]
+- url: "https://django-request.readthedocs.io/en/latest/index.html"
+  topics: ["backend"]
+- url: "https://django-request.readthedocs.io/en/latest/install.html"
+  topics: ["backend"]
+- url: "https://django-haystack.readthedocs.io/en/master/index.html"
+  topics: ["backend"]
+- url: "https://django-haystack.readthedocs.io/en/master/backend_support.html"
+  topics: ["backend"]
+- url: "https://uwsgi-docs.readthedocs.io/en/latest/WSGIquickstart.html"
+  topics: ["backend"]
+- url: "https://django-transaction-hooks.readthedocs.io/en/latest/"
+  topics: ["backend"]
+- url: "https://django-crm.readthedocs.io/en/latest/index.html"
+  topics: ["backend"]
+- url: "https://python-xmlunittest.readthedocs.io/en/latest/"
+  topics: ["backend"]  # Testing
+- url: "https://urllib3.readthedocs.io/en/latest/reference/urllib3.fields.html"
+  topics: ["backend"]  # HTTP
+- url: "https://urllib3.readthedocs.io/en/latest/advanced-usage.html"
+  topics: ["backend"]  # HTTP
+- url: "https://blazor-boilerplate.readthedocs.io/en/latest/intro/architecture.html"
+  topics: ["backend"]  # .net
+- url: "https://docs.fire.ly/projects/Firely-NET-SDK/model/initializers.html"
+  topics: ["backend"]  # .net
+- url: "https://laravel-json-api.readthedocs.io/en/latest/basics/api/"
+  topics: ["backend"]  # PHP
+- url: "https://laravel-json-api.readthedocs.io/en/latest/"
+  topics: ["backend", "frontend"]  # PHP
+- url: "https://docs.orchardcore.net/projects/O1/en/latest/Documentation/Getting-Started/"
+  topics: ["backend"]  # .net
+- url: "https://python-fints.readthedocs.io/en/latest/quickstart.html"
+  topics: ["backend"]  # Python
+- url: "https://trankit.readthedocs.io/en/latest/ssplit.html"
+  topics: ["backend"]  # Python
+- url: "https://jakeydocs.readthedocs.io/en/latest/tutorials/first-mvc-app/start-mvc.html"
+  topics: ["backend"]  # .net
+- url: "https://parsel.readthedocs.io/en/latest/"
+  topics: ["backend", "frontend"]  # Python
+- url: "https://parsel.readthedocs.io/en/latest/usage.html"
+  topics: ["backend", "frontend"]  # Python
 
 
 ##############################################################################
@@ -711,6 +855,18 @@
   topics: ["devops"]
 - url: "https://pymodbustcp.readthedocs.io/en/latest/package/class_ModbusClient.html"
   topics: ["devops"]
+- url: "https://lametric-documentation.readthedocs.io/en/latest/reference-docs/device-authorization.html"
+  topics: ["devops", "security"]
+- url: "https://oci-ansible-collection.readthedocs.io/en/latest/"
+  topics: ["devops"]
+- url: "https://identitymodel.readthedocs.io/en/latest/index.html"
+  topics: ["devops", "security"]
+- url: "https://identitymodel.readthedocs.io/en/latest/client/overview.html"
+  topics: ["devops", "security"]
+- url: "https://docs.bacula-web.org/en/latest/01_about/about.html"
+  topics: ["devops"]
+- url: "https://docs.bacula-web.org/en/latest/02_install/upgrade.html"
+  topics: ["devops"]
 
 
 ##############################################################################
@@ -756,6 +912,8 @@
   topics: ["blockchain"]
 - url: "https://ethereum-on-arm-documentation.readthedocs.io/en/latest/quick-guide/recommended-hardware.html"
   topics: ["blockchain"]  # also hardware
+- url: "https://ethereum-on-arm-documentation.readthedocs.io/en/latest/user-guide/security.html"
+  topics: ["blockchain", "security"]
 - url: "https://web3js.readthedocs.io/en/v1.5.2/index.html"
   topics: ["blockchain"]
 - url: "https://web3js.readthedocs.io/en/v1.5.2/getting-started.html"
@@ -790,6 +948,18 @@
   topics: ["blockchain"]
 - url: "https://eth-brownie.readthedocs.io/en/stable/compile.html"
   topics: ["blockchain"]
+- url: "https://hyperledger-indy.readthedocs.io/en/latest/index.html"
+  topics: ["blockchain"]
+- url: "https://cryptocom-exchange.readthedocs.io/en/latest/index.html"
+  topics: ["blockchain"]
+- url: "https://cryptocom-exchange.readthedocs.io/en/latest/api.html"
+  topics: ["blockchain"]
+- url: "https://ethereum-waffle.readthedocs.io/en/latest/index.html"
+  topics: ["blockchain"]
+- url: "https://ethereum-waffle.readthedocs.io/en/latest/ens.html"
+  topics: ["blockchain"]
+- url: "https://fxcm-api.readthedocs.io/en/latest/fixdocs/fixapi.html"
+  topics: ["blockchain"]
 
 
 ##############################################################################
@@ -806,8 +976,6 @@
 # These pages have a ton of inline SVGs which should be stripped by our preprocessor
 # Also a bunch of the HTML is malformed (eg. < span>)
 - url: "https://graphemica.com/"
-  topics: []
-- url: "https://graphemica.com/0001"
   topics: []
 # Vehicle Navigation library?
 - url: "https://docs-a1.readthedocs.io/en/latest/getting_started.html"
@@ -843,6 +1011,34 @@
   topics: []
 - url: "https://coderseditor.com/"
   topics: []
+- url: "https://3dcitydb-docs.readthedocs.io/en/latest/3dcitydb/index.html"
+  topics: []  # UML?
+- url: "https://qpdf.readthedocs.io/en/stable/library.html"
+  topics: []  # C/C++, PDFs
+- url: "https://qpdf.readthedocs.io/en/stable/overview.html"
+  topics: []  # C/C++, PDFs
+- url: "https://btrfs.readthedocs.io/en/latest/Introduction.html"
+  topics: []  # hardware, filesystems
+- url: "https://btrfs.readthedocs.io/en/latest/Reflink.html"
+  topics: []  # hardware, filesystems
+- url: "https://btrfs.readthedocs.io/en/latest/Hardware.html"
+  topics: []  # hardware, filesystems
+- url: "https://fast-dds.docs.eprosima.com/en/latest/fastdds/dynamic_types/dynamic_types.html"
+  topics: []  # C/C++
+- url: "https://guake.readthedocs.io/en/latest/user/whatisguake.html"
+  topics: []
+- url: "https://guake.readthedocs.io/en/latest/user/cli.html"
+  topics: []  # Python
+- url: "https://winshell.readthedocs.io/en/latest/index.html"
+  topics: []  # Python, Windows
+- url: "https://docs.geonode.org/en/master/usage/accounts_user_profile/updating_profile/associating_email.html"
+  topics: []
+- url: "https://beets.readthedocs.io/en/stable/index.html"
+  topics: []  # Python, Music
+- url: "https://beets.readthedocs.io/en/stable/plugins/lastgenre.html"
+  topics: []  # Python, Music
+- url: "https://gcovr.com/en/4.1/guide.html"
+  topics: []  # Testing
 
 # Hardware
 - url: "https://mido.readthedocs.io/en/latest/roadmap.html"
@@ -909,7 +1105,7 @@
   topics: []
 - url: "https://docs.godotengine.org/en/stable/getting_started/first_3d_game/index.html"
   topics: []
-- url: "https://docs.godotengine.org/de/stable/getting_started/first_2d_game/03.coding_the_player.html"
+- url: "https://docs.godotengine.org/en/stable/getting_started/first_2d_game/03.coding_the_player.html"
   topics: []
 - url: "https://docs.godotengine.org/en/3.1/getting_started/step_by_step/signals.html"
   topics: []
@@ -938,13 +1134,31 @@
 # Not actually gaming - this is a framework for social science?
 #- url: "https://otree.readthedocs.io/en/latest/tutorial/part3.html"
 #  topics: []
-# Modrinth doesn't actually say much about "games" exactly.
-# The classifier will hopefully get smart but this might be a hard one.
-- url: "https://modrinth.com/mod/sandwichable"
+- url: "https://openpyxl.readthedocs.io/en/latest/print_settings.html"
   topics: []
-- url: "https://modrinth.com/mod/excavated_variants"
+- url: "https://openpyxl.readthedocs.io/en/latest/datetime.html"
   topics: []
-- url: "https://modrinth.com/mod/thatorthis"
+- url: "https://streamlit-book.readthedocs.io/en/latest/"
   topics: []
-- url: "https://modrinth.com/mod/trufflez-arcanum"
+- url: "https://doorstop.readthedocs.io/en/latest/"
   topics: []
+- url: "https://doorstop.readthedocs.io/en/latest/cli/interchange/"
+  topics: []
+- url: "https://origins.readthedocs.io/en/latest/types/damage_condition_types/attacker/"
+  topics: []  # Game dev
+- url: "https://androidaps.readthedocs.io/en/latest/Usage/Enabling-Engineering-Mode-in-xDrip.html"
+  topics: []  # Maybe mobile
+- url: "https://hikari-lightbulb.readthedocs.io/en/latest/index.html"
+  topics: []
+- url: "https://hikari-lightbulb.readthedocs.io/en/latest/guides/application-commands.html"
+  topics: []
+- url: "https://google-calendar-simple-api.readthedocs.io/en/latest/events.html"
+  topics: []
+- url: "https://gcovr.com/en/stable/index.html"
+  topics: []  # Testing maybe
+- url: "https://nanogui.readthedocs.io/en/latest/index.html"
+  topics: []  # GUI maybe
+- url: "https://exif.readthedocs.io/en/latest/index.html"
+  topics: []
+- url: "https://fusesoc.readthedocs.io/en/stable/user/introduction.html"
+  topics: []  # Hardware
