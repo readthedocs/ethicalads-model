@@ -227,8 +227,9 @@ def main(args):
     print("Copying trained model to local packages/ directory...")
     copy_trained_model(ssh_identity_file, instance_ip)
 
-    print(f"Terminating instance {instance_id}...")
-    terminate_instance(instance_id)
+    if not args.skip_termination:
+        print(f"Terminating instance {instance_id}...")
+        terminate_instance(instance_id)
 
 
 if __name__ == "__main__":
