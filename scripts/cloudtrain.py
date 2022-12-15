@@ -248,6 +248,12 @@ if __name__ == "__main__":
         help="LambdaLabs SSH Key Name to use (defaults to the first one on https://cloud.lambdalabs.com/ssh-keys)",
         default=None,
     )
+    parser.add_argument(
+        "--skip-termination",
+        help="Leave the instance running (and billing) after training",
+        default=False,
+        action="store_true",
+    )
     args = parser.parse_args()
 
     try:
