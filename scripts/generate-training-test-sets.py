@@ -27,6 +27,10 @@ from textacy import preprocessing
 
 DEFAULT_TRAIN_TEST_SPLIT = 0.8
 
+# The adserver discards any pages with less text
+# We should too in training
+MIN_TEXT_LENGTH = 500
+
 MAIN_CONTENT_SELECTORS = (
     "[role='main']",
     "main",
@@ -101,6 +105,10 @@ def preprocess_training_set(infile):
 
         if resp.ok:
             text = preprocess_html(resp.content)
+            if len(text) < MIN_TEXT_LENGTH:
+                print(f"Skipping URL {url}. Contents are too short ({len(text)})...")
+                continue
+
             new_training_set.append(
                 {
                     "text": text,
