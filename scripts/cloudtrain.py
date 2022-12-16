@@ -227,8 +227,9 @@ def main(args):
     print("Copying trained model to local packages/ directory...")
     copy_trained_model(ssh_identity_file, instance_ip)
 
-    print(f"Terminating instance {instance_id}...")
-    terminate_instance(instance_id)
+    if not args.skip_termination:
+        print(f"Terminating instance {instance_id}...")
+        terminate_instance(instance_id)
 
 
 if __name__ == "__main__":
@@ -247,6 +248,12 @@ if __name__ == "__main__":
         "--ssh-key-name",
         help="LambdaLabs SSH Key Name to use (defaults to the first one on https://cloud.lambdalabs.com/ssh-keys)",
         default=None,
+    )
+    parser.add_argument(
+        "--skip-termination",
+        help="Leave the instance running (and billing) after training",
+        default=False,
+        action="store_true",
     )
     args = parser.parse_args()
 
