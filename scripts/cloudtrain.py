@@ -55,7 +55,29 @@ def lambdalabs_api_call(path, method="GET", json=None):
     return resp
 
 
-def get_available_instances():
+def get_available_instance():
+    instance_type_name = None
+    region_name = None
+
+    # Get which of our desired instance types has capacity
+    offered_instances = get_offered_instances()
+    for name in offered_instances:
+        if name not in DESIRED_INSTANCE_TYPES:
+            continue
+
+        instance_type = offered_instances[name]
+
+        # Use the first available region
+        if instance_type["regions_with_capacity_available"]:
+            region_name = instance_type["regions_with_capacity_available"][0]["name"]
+            instance_type_name = name
+            break
+
+    # Returns None, None if nothing is available
+    return instance_type_name, region_name
+
+
+def get_offered_instances():
     resp = lambdalabs_api_call("/instance-types")
     return resp.json()["data"]
 
@@ -101,7 +123,7 @@ def get_instance_details(instance_id):
 
 
 def wait_for_instance(instance_id):
-    # Loop until the instance is available
+    # Loop until the instance has booted up and is available
     while True:
         time.sleep(5)
         details = get_instance_details(instance_id)
@@ -179,31 +201,24 @@ def terminate_instance(instance_id):
 def main(args):
     ssh_identity_file = args.ssh_identity_file
     ssh_key_name = args.ssh_key_name
-    instance_type_name = None
-    region_name = None
 
     # Get the SSH key to use
     if not ssh_key_name:
         keys = get_ssh_keys()
         for key in keys:
             ssh_key_name = key
-            print(f"No SSH key name specified. Using {ssh_key_name}...")
+            print(f"No SSH key name specified. Using {ssh_key_name}.")
             break
 
-    # Get which of our desired instance types has capacity
-    available_instances = get_available_instances()
-    for instance_type_name in available_instances:
-        if instance_type_name not in DESIRED_INSTANCE_TYPES:
-            continue
+    instance_type_name, region_name = get_available_instance()
+    if args.wait_for_capacity and (not instance_type_name or not region_name):
+        print("Waiting for GPU instances to become available...")
+        while (not instance_type_name or not region_name):
+            time.sleep(15)
+            instance_type_name, region_name = get_available_instance()
 
-        instance_type = available_instances[instance_type_name]
-
-        # Use the first available region
-        if instance_type["regions_with_capacity_available"]:
-            region_name = instance_type["regions_with_capacity_available"][0]["name"]
-            break
-
-    if not region_name:
+    if not instance_type_name or not region_name:
+        # No GPU instance capacity
         print("No GPU capacity available of desired instance types. Quitting...")
         return
 
@@ -252,6 +267,12 @@ if __name__ == "__main__":
     parser.add_argument(
         "--skip-termination",
         help="Leave the instance running (and billing) after training",
+        default=False,
+        action="store_true",
+    )
+    parser.add_argument(
+        "--wait-for-capacity",
+        help="Wait for GPU instances to become available",
         default=False,
         action="store_true",
     )
